@@ -1,0 +1,82 @@
+---
+import { site } from "../data/site";
+---
+
+<section id="top" class="relative overflow-hidden">
+  <!-- Aksen latar halus -->
+  <div
+    class="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu blur-3xl"
+    aria-hidden="true"
+  >
+    <div
+      class="mx-auto aspect-1155/678 w-[36rem] bg-gradient-to-tr from-accent-200 to-accent-400 opacity-20 dark:from-accent-700 dark:to-accent-900 dark:opacity-20"
+      style="clip-path: polygon(74% 44%, 100% 61%, 97% 26%, 85% 0, 80% 2%, 72% 32%, 60% 62%, 52% 68%, 47% 58%, 45% 34%, 27% 76%, 0 64%, 17% 100%, 27% 76%, 76% 97%, 74% 44%)"
+    >
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-5xl px-5 py-24 sm:px-6 sm:py-28 lg:py-32">
+    <div class="grid items-center gap-10 md:grid-cols-[1fr_auto] md:gap-14">
+      <!-- Teks -->
+      <div class="order-2 max-w-2xl md:order-1">
+        <p
+          class="reveal mb-4 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-sm font-medium text-slate-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+        >
+          <span class="relative flex h-2 w-2">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-500 opacity-75"></span>
+            <span class="relative inline-flex h-2 w-2 rounded-full bg-accent-600"></span>
+          </span>
+          Terbuka untuk peluang baru
+        </p>
+
+        <h1
+          class="reveal text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-white"
+        >
+          {site.name}
+        </h1>
+        <p class="reveal mt-3 text-xl font-semibold text-accent-600 sm:text-2xl dark:text-accent-400">
+          {site.role}
+        </p>
+        <p
+          class="reveal mt-6 max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-300"
+        >
+          {site.tagline}
+        </p>
+
+        <div class="reveal mt-9 flex flex-wrap items-center gap-3">
+          <a
+            href="#projects"
+            class="inline-flex items-center justify-center rounded-lg bg-accent-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-accent-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-600"
+          >
+            Lihat Project
+          </a>
+          <a
+            href="#contact"
+            class="inline-flex items-center justify-center rounded-lg border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
+          >
+            Hubungi Saya
+          </a>
+        </div>
+      </div>
+
+      <!-- Foto profil -->
+      <div class="reveal order-1 flex justify-center md:order-2">
+        <div class="relative">
+          <div
+            class="absolute -inset-3 -z-10 rounded-full bg-gradient-to-tr from-accent-400 to-accent-600 opacity-20 blur-2xl dark:opacity-30"
+            aria-hidden="true"
+          >
+          </div>
+          <img
+            src={site.photo}
+            alt={`Foto ${site.name}`}
+            width="288"
+            height="288"
+            decoding="async"
+            class="h-48 w-48 rounded-full object-cover shadow-xl ring-4 ring-white sm:h-64 sm:w-64 md:h-72 md:w-72 dark:ring-slate-800"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
